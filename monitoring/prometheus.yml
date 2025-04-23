@@ -1,0 +1,13 @@
+# Create a basic Prometheus configuration file to scrape metrics from services
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "node-app"
+    static_configs:
+      - targets: ["localhost:3000"]
+
+  - job_name: "python-app"
+    static_configs:
+      - targets: ["localhost:8000"]

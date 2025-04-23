@@ -1,0 +1,13 @@
+
+{
+  "dashboard": {
+    "title": "DevOps Template Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Node.js Requests",
+        "targets": [{"expr": "rate(http_requests_total[5m])"}]
+      }
+    ]
+  }
+}
