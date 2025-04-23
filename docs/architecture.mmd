@@ -1,0 +1,11 @@
+%% Create an architecture diagram for a DevOps template repository with CI/CD, Docker, Terraform, and Monitoring
+
+graph TD
+  Dev[Developer] -->|Push code| GitHub[GitHub Actions]
+  GitHub --> CI[CI Workflow]
+  GitHub --> CD[CD Workflow]
+  CD --> Docker[Docker Image]
+  Docker --> ECS[Cloud Deploy]
+  CI --> Terraform[Infrastructure Provision]
+  ECS --> Monitoring[Prometheus & Grafana]
+
