@@ -1,0 +1,25 @@
+# Create a docker-compose file for local development with Node.js and Python services
+
+
+version: '3.8'
+
+services:
+  node-app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.node
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    restart: always
+
+  python-app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.python
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    restart: always
